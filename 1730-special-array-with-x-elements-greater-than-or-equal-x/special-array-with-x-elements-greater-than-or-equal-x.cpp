@@ -4,7 +4,7 @@ public:
         int res = -1;
         //int x = *max_element(nums.begin(),nums.end());
 
-        for(int i = 0; i < 101; i++){
+        for(int i = 0; i < nums.size() + 3; i++){
             int cnt = 0;
             for(int j = 0; j < nums.size(); j++){
                 if(nums[j]>=i){
