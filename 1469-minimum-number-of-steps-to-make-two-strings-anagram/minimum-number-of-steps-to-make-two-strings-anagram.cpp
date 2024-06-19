@@ -6,7 +6,7 @@ public:
             mp[i]++;
         }
         for(auto i:t){
-                mp[i]--;
+            mp[i]--;
         }
         int res = 0;
         for(const auto&it:mp){
