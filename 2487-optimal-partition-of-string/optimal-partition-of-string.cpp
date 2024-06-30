@@ -1,14 +1,15 @@
 class Solution {
 public:
     int partitionString(string s) {
-        set<char>sh;
+        vector<bool> vec(26, false);
         int ans = 1;
-        for(int i = 0; i < s.length(); i++){
-            if(sh.find(s[i])!=sh.end()){
-                 ans++;
-                 sh.clear();
+        for(char c:s) {
+            int idx = c - 'a';
+            if (vec[idx]) {
+                ans++;
+                fill(vec.begin(), vec.end(), false);
             }
-            sh.insert(s[i]);
+            vec[idx] = true;
         }
 
         return ans;
